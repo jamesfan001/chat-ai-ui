@@ -21,7 +21,7 @@ export const useChatStore = defineStore('chat', () => {
 
   // Load previous chat messages
   const loadChatHistory = async () => {
-    if (!userStore.userId) return;
+    if (!userStore.userId) return; 
 
     try {
       const { data } = await axios.post(

@@ -44,9 +44,9 @@ onMounted(() => {
 });
 </script>
 
-<template>
+<template> 
   <div class="flex flex-col h-screen bg-gray-900 text-white">
-    <Header />
+    <Header></Header>
 
     <!-- Chat messages -->
     <div id="chat-container" class="flex-1 overflow-y-auto p-4 space-y-4">
@@ -54,7 +54,7 @@ onMounted(() => {
         v-for="(msg, index) in chatStore.messages"
         :key="index"
         class="flex items-start"
-        :class="msg.role === 'user' ? 'justify-end' : 'justify-start'"
+        :class="msg.role === 'ai' ? 'justify-start' : 'justify-end'"
       >
         <div
           v-html="formatMessage(msg.content)"

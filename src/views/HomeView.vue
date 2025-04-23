@@ -8,8 +8,8 @@ import robotImage from '../assets/robot.png';
 const userStore = useUserStore();
 const router = useRouter();
 
-const name = ref('');
-const email = ref('');
+const name = ref('queeniefan001_gmail_com');
+const email = ref('queeniefan001@gmail.com');
 const loading = ref(false);
 const error = ref('');
 

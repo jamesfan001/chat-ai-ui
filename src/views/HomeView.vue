@@ -20,7 +20,7 @@ const createUser = async () => {
   }
 
   loading.value = true;
-  error.value = '';
+  error.value = ''; 
 
   try {
     const { data } = await axios.post(
@@ -43,6 +43,7 @@ const createUser = async () => {
     loading.value = false;
   }
 };
+const apiUrl = import.meta.env.VITE_API_URL;
 </script>
 
 <template>
@@ -50,7 +51,7 @@ const createUser = async () => {
     <div class="p-8 bg-gray-800 rounded-lg shadow-lg w-full max-w-md">
       <img :src="robotImage" alt="" class="mx-auto w-24 h-24 mb-4" />
       <h1 class="text-2xl font-semibold mb-4 text-center">
-        Welcome To Chat AI
+        Welcome To Chat AI {{apiUrl}}
       </h1>
 
       <input

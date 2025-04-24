@@ -24,7 +24,8 @@ const createUser = async () => {
 
   try {
     const { data } = await axios.post(
-      `${import.meta.env.VITE_API_URL}/register-user`,
+      `http://bayterrace.ddns.net:8001/register-user`,
+      // `${import.meta.env.VITE_API_URL}/register-user`,
       {
         name: name.value,
         email: email.value,

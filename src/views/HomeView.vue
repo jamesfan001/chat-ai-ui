@@ -38,7 +38,7 @@ const createUser = async () => {
 
     router.push('/chat');
   } catch (err) {
-    error.value = 'Something went wrong. Please try again';
+    error.value = 'Something went wrong.' + (err as Error).message;
   } finally {
     loading.value = false;
   }
@@ -54,6 +54,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
         Welcome To Chat AI {{apiUrl}}
       </h1>
 
+      
       <input
         type="text"
         class="w-full p-2 mb-2 bg-gray-700 text-white rounded-lg focus:outline-none"

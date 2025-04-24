@@ -2,11 +2,12 @@
 import { useUserStore } from '../stores/user';
 import { useRouter } from 'vue-router';
 import robotImage from '../assets/robot.png';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
    
-dotenv.config();
-const apiUrl = process.env.VUE_APP_API_URI || 'http://localhost:3000';
-// const apiUrl = import.meta.env.VITE_API_URL;
+
+// dotenv.config();
+// const apiUrl = process.env.VUE_APP_API_URI || 'http://localhost:3000';
+const apiUrl = import.meta.env.VITE_API_URL;
 const userStore = useUserStore();
 const router = useRouter();
 
